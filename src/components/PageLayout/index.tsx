@@ -13,7 +13,8 @@ const openedMixin = (theme: Theme): CSSObject => ({
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.enteringScreen,
   }),
-  borderRadius: '0px 30px 0px 0px'
+  borderRadius: '0px 30px 0px 0px',
+  backgroundColor: '#00a1ff5e'
 });
 
 const closedMixin = (theme: Theme): CSSObject => ({
@@ -27,6 +28,7 @@ const closedMixin = (theme: Theme): CSSObject => ({
   },
   borderRadius: '0px 30px 0px 0px',
   overflowX: 'hidden',
+  backgroundColor: '#00a1ff5e'
 });
 
 const DrawerHeader = styled('div')(({ theme }) => ({
@@ -80,7 +82,7 @@ export function PageLayout({ children, drawerItems }: DrawerType) {
   };
 
   return (
-    <div id='page' style={{width: '100vw', height: '100vh', display: 'flex'}}>
+    <div id='page' style={{width: '100vw', height: '100vh', display: 'flex', backgroundColor: 'gainsboro' }}>
       <Drawer
         variant="permanent"
         open={open}
